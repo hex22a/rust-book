@@ -1,5 +1,6 @@
-use crate::{fahrenheit_to_celsius::ftoc, fibonacci::fibonacci};
+use crate::{christmas_song::print_lyrics, fahrenheit_to_celsius::ftoc, fibonacci::fibonacci};
 
+mod christmas_song;
 mod fahrenheit_to_celsius;
 mod fibonacci;
 
@@ -26,4 +27,6 @@ fn main() {
 
     println!("451F in Celsius: {}", ftoc(451.0));
     println!("6th Fibonacci number is: {}", fibonacci(6));
+    println!("Crsitmas song:");
+    print_lyrics();
 }
