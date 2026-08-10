@@ -30,7 +30,11 @@ impl Config {
         let query = args[1].clone();
         let file_path = args[2].clone();
 
-        let ignore_case = env::var("IGNORE_CASE").is_ok();
+        let mut ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        if args.len() == 4 {
+            ignore_case = true
+        }
 
         Ok(Config {
             query,
